@@ -2,15 +2,15 @@
 
 **`swagger-gradle-plugin` supports gradle 3.2 and higher.**
 
-## Installation
-### Gradle 3.2 and higher
+## Getting Started
+### Using the Plugin DSL
 
 ```
 plugins {
   id "io.swagger.core.v3.swagger-gradle-plugin" version "2.0.10-SNAPSHOT"
 }
 ```
-### Gradle 1.x and 2.0
+### Using the buildscript Syntax
 
 **NOTE**: Since version `2.0.10` gradle 1.x and 2.x up to 3.1 are not supported.
 
@@ -31,7 +31,7 @@ buildscript {
 apply plugin: "io.swagger.core.v3.swagger-gradle-plugin"
 ```
 
-## Tasks
+## Custom Task Type
 ### resolve
 
 * Resolves project openAPI specification and saves the result in JSON, YAML or both formats.
@@ -41,7 +41,6 @@ to `swagger` [configuration property](https://github.com/swagger-api/swagger-cor
 #### Example Usage
 
 ```
-
 resolve {
     outputFileName = 'PetStoreAPI'
     outputFormat = 'JSON'
@@ -68,7 +67,7 @@ Parameter | Description | Required | Default
 `filterClass`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
 `readerClass`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
 `scannerClass`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
-`readAllResources`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
+`readAllResources`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|`TRUE`
 `ignoredRoutes`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
 `objectMapperProcessorClass`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
 `modelConverterClasses`|see [configuration property](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Integration-and-Configuration#configuration-properties)|false|
